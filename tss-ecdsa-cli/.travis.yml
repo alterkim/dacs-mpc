@@ -1,0 +1,17 @@
+language: rust
+cache: cargo
+
+rust:
+  - nightly
+
+matrix:
+  include:
+    - os: osx
+      script:
+        - cargo build --verbose
+        - cargo test --verbose
+
+    - os: linux
+      script:
+        - cargo build --verbose
+        - cargo test --verbose
